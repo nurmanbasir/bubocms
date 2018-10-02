@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bubo" ng-controller="bubo">
+<head>
+  <meta charset="utf-8">
+  <title>bubo - Platform kotak amal digital</title>
+
+  <meta property="og:title" name="description" content="Yuk mulai beramal dengan platform kotak amal digital dari bubo" />
+  <meta property="og:description" name="description" content="Memperkenalkan, platform kotak amal digital. Dengan platform ini kamu dapat melakukan donasi dengan cara melakukan scan barcode yang sudah terdaftar sebagai sebaran barcode menggunakan smartphone. Yuk mulai beramal secara digital dengan bubo" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bubo.id" />
+  <meta property="og:image" content="https://bubo.id/images/campaign.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:secure_url" content="https://bubo.id/images/campaign.png" />
+  <meta property="og:image:width" content="1152" />
+  <meta property="og:image:height" content="600" />
+  <meta property="fb:app_id" content="2035439846730435" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="https://bubo.id/favicon.ico" id="favicon">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <link href="/css/style.css?v=1.0.52" rel="stylesheet">
+</head>
+<body>
+  <section class="hero" ng-style="{'background-image':'url({{page.media}})'}">
+    <article>
+        <a class="logo" href="/">
+          <img src="/images/bubo.png"/>
+          <h1 class="title"><span>Barcode</span>amal</h1>
+        </a>
+    </article>
+  </section>
+  <section class="info" ng-controller="campaign">
+    <article ng-include="getCurrentPage()" ></article>
+    <article ng-include="'/footer.html'"></article>
+  </section>
+  <div class="modal" ng-show="register">
+    <div class="content">
+      <div class="close" ng-click="switchRegister()"><span>&#10006;</span></div>
+      <iframe class="content" frameborder="0" src="/register.html"></iframe>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102073540-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-102073540-1');
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="/js/bubo.js?v=1.0.52"></script>
+</body>
+</html>
